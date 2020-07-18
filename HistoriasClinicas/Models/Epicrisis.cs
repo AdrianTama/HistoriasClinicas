@@ -7,6 +7,7 @@ namespace HistoriasClinicas.Models
 {
     public class Epicrisis
     {
+        public int EpicrisisId { get; set; }
         public HistoriaClinica HistoriaClinica { get; set; }
 
         public DateTime HoraCarga { get; set; }
