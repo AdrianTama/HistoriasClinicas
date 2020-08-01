@@ -5,9 +5,11 @@ using System.Threading.Tasks;
 
 namespace HistoriasClinicas.Models
 {
-    public class Paciente
+    public class Paciente : Persona
     {
         public int PacienteId { get; set; }
+
+        public int HistoriaClinicaId { get; set; }
         public HistoriaClinica HistoriaClinica { get; set; }
 
 

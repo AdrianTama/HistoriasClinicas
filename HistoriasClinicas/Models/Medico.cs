@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace HistoriasClinicas.Models
 {
-    public class Medico
+    public class Medico : Persona
     {
         [Key]
         public string CodEmpleado { get; set; }
 
+        [Required(ErrorMessage = "Este campo es requerido")]
+        [MinLength(5, ErrorMessage = "El campo {0} debe tener como mínimo {1} caracteres")]
         public string Especialidad { get; set; }
 
     }

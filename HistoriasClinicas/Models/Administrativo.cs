@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HistoriasClinicas.Models
 {
-    public class Administrativo
+    public class Administrativo : Persona
     {
         [Key]
         public string CodEmpleado { get; set; }
