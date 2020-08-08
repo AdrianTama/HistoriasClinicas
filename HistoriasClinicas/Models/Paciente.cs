@@ -9,7 +9,6 @@ namespace HistoriasClinicas.Models
     {
         public int PacienteId { get; set; }
 
-        public int HistoriaClinicaId { get; set; }
         public HistoriaClinica HistoriaClinica { get; set; }
 
 
