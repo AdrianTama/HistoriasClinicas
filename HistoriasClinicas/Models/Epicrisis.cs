@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.CodeAnalysis;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,19 +11,20 @@ namespace HistoriasClinicas.Models
     {
         public int EpicrisisId { get; set; }
 
-        public int HistoricaClinicaId { get; set; }
+        public int EpisodioId { get; set; }
+        public Episodio Episodio { get; set; }
 
-        public HistoriaClinica HistoriaClinica { get; set; }
+        public int Matricula { get; set; }
+        public Medico Medico { get; set; }
 
-        public DateTime HoraCarga { get; set; } = DateTime.Now;
+        [Required(ErrorMessage = "Este campo es requerido")]
+        public DateTime FechaYHora { get; set; } = DateTime.Now;
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [MinLength(10, ErrorMessage = "El campo {0} debe tener como mínimo {1} caracteres")]
-        public string Diagnostico { get; set; }
 
-        public ICollection<Recomendacion> Recomendaciones { get; set; }
-
-        public ICollection<Nota> Notas { get; set; }
+        public int DiagnosticoId { get; set; }
+        public Diagnostico Diagnostico { get; set; }
 
 
     }
