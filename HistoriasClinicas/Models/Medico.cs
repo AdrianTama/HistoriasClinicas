@@ -9,7 +9,10 @@ namespace HistoriasClinicas.Models
     public class Medico : Persona
     {
         [Key]
-        public string CodEmpleado { get; set; }
+        public int Matricula { get; set; }
+
+        [Required(ErrorMessage = "Este campo es requerido")]
+        public int Dni { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [MinLength(5, ErrorMessage = "El campo {0} debe tener como mínimo {1} caracteres")]

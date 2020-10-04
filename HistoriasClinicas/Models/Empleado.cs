@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace HistoriasClinicas.Models
 {
-    public class Recomendacion
+    public class Empleado : Persona
     {
-        public int RecomendacionId { get; set; }
+        [Key]
+        public string Legajo { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
-        [MinLength(10, ErrorMessage = "El campo {0} debe tener como mínimo {1} caracteres")]
-        public string Descripcion { get; set; }
+        public int Dni { get; set; }
     }
 }

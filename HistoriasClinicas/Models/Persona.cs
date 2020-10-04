@@ -8,7 +8,6 @@ namespace HistoriasClinicas.Models
 {
     public class Persona
     {
-        public int Dni { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [MaxLength(30, ErrorMessage = "El campo {0} debe tener como máximo {1} caracteres")]
@@ -20,7 +19,7 @@ namespace HistoriasClinicas.Models
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [DataType(DataType.Date)]
-        public DateTime Nacimiento { get; set; }
+        public DateTime FechaAlta { get; set; }
 
         [Required(ErrorMessage = "Este campo es requerido")]
         [EmailAddress]
@@ -28,6 +27,9 @@ namespace HistoriasClinicas.Models
 
         [Required(ErrorMessage = "Este campo es requerido")]
         public int Telefono { get; set; }
+
+        [Required(ErrorMessage = "Este campo es requerido")]
+        public string Direccion { get; set; }
 
     }
 }
